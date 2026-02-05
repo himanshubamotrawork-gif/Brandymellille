@@ -12,7 +12,9 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-HNYLQQJHC6');
+  gtag('config', 'G-HNYLQQJHC6', {
+    debug_mode: false
+      });
 </script>
    <style>
   :root {
@@ -154,6 +156,8 @@ if (typeof gtag === 'function') {
 gtag('event', 'start_now_click', {
   event_category: 'CTA',
   event_label: 'Brandy Melville Gift Card',
+  value: 1,
+  debug_mode: false,
   transport_type: 'beacon'
 });
 }
