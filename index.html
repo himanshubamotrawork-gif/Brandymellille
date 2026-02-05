@@ -16,13 +16,13 @@
     debug_mode: false
       });
 </script>
- <style>
+<style>
 :root {
   --bg: #ffffff;
-  --text: #2b2b2b;
-  --muted: #8b8b8b;
-  --border: #ededed;
-  --primary: #000000;
+  --text: #1f1f1f;
+  --muted: #7a7a7a;
+  --border: #ececec;
+  --primary: #1f1f1f;
 }
 
 * { box-sizing: border-box; }
@@ -35,30 +35,34 @@ body {
   overflow-x: hidden;
 }
 
+/* LAYOUT */
 .container {
   max-width: 720px;
   margin: auto;
-  padding: 36px 22px 64px;
+  padding: 40px 22px 70px;
   text-align: center;
 }
 
+/* BRAND */
 .brand {
+  font-family: Georgia, 'Times New Roman', serif;
   font-weight: 500;
-  font-size: 22px;
-  margin-bottom: 26px;
-  color: var(--primary);
-  letter-spacing: 0.6px;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--text);
+  letter-spacing: 0.4px;
 }
 
+/* CARD */
 .card-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .card-mask {
   background: #fff;
-  padding: 14px;
+  padding: 16px;
   border-radius: 22px;
   border: 1px solid var(--border);
 }
@@ -70,94 +74,115 @@ body {
   border-radius: 18px;
 }
 
+/* HEADLINE */
 h1 {
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 34px;
   margin: 0 0 14px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
+h1 span {
+  font-weight: 500;
+}
+
+/* SUBTEXT */
 .sub {
   color: var(--muted);
   font-size: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
-/* CTA */
+/* CTA – subtle, not loud */
 .cta {
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  min-width: 280px;
-  height: 56px;
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid var(--text);
+  min-width: 260px;
+  height: 52px;
   padding: 0 32px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   border-radius: 999px;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .cta:hover {
-  opacity: 0.85;
+  background: #f5f5f5;
 }
 
+/* HOW IT WORKS */
 .how {
-  margin-top: 52px;
+  margin-top: 60px;
 }
 
 .how h2 {
-  margin-bottom: 26px;
-  font-weight: 600;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
+/* STEPS */
 .step {
-  background: #fafafa;
-  border-radius: 18px;
-  padding: 18px 22px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px 24px;
   display: flex;
   gap: 18px;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   border: 1px solid var(--border);
   text-align: left;
 }
 
 .step strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
+.step span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* STEP NUMBER */
 .num {
   min-width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #000;
-  color: #fff;
-  font-weight: 600;
+  background: #ffffff;
+  border: 1px solid var(--text);
+  color: var(--text);
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* FINAL CTA */
 .final-cta {
-  margin-top: 36px;
+  margin-top: 42px;
 }
 
+/* FOOTER */
 .footer {
   font-size: 12px;
-  color: #999;
-  margin-top: 44px;
+  color: #9a9a9a;
+  margin-top: 48px;
 }
 
+/* DESKTOP BLOCK */
 #desktop-message {
   display: none;
   text-align: center;
   padding: 80px 20px;
-  color: #000;
+  color: var(--text);
 }
 </style>
 </head>
