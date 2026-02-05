@@ -17,62 +17,150 @@
       });
 </script>
    <style>
-  :root {
+:root {
   --bg: #ffffff;
   --text: #2b2b2b;
   --muted: #8b8b8b;
   --border: #ededed;
-  --primary: #2b2b2b;
+  --primary: #000000;
 }
 
+* { box-sizing: border-box; }
+
 body {
-  background: var(--bg);
+  margin: 0;
   font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 720px;
+  margin: auto;
+  padding: 36px 22px 64px;
+  text-align: center;
 }
 
 .brand {
   font-weight: 500;
   font-size: 22px;
-  letter-spacing: 0.5px;
+  margin-bottom: 26px;
+  color: var(--primary);
+  letter-spacing: 0.6px;
+}
+
+.card-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .card-mask {
-  border-radius: 18px;
+  background: #fff;
+  padding: 14px;
+  border-radius: 22px;
   border: 1px solid var(--border);
+}
+
+.card-wrap img {
+  width: 260px;
+  max-width: 100%;
+  display: block;
+  border-radius: 18px;
 }
 
 h1 {
   font-size: 34px;
+  margin: 0 0 14px;
   font-weight: 600;
 }
 
 .sub {
-  font-size: 15px;
   color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
+/* CTA */
 .cta {
   background: var(--primary);
   color: #fff;
-  border-radius: 999px;
-  text-transform: uppercase;
+  border: none;
+  min-width: 280px;
+  height: 56px;
+  padding: 0 32px;
+  font-size: 15px;
   font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease;
 }
 
 .cta:hover {
   opacity: 0.85;
 }
 
+.how {
+  margin-top: 52px;
+}
+
+.how h2 {
+  margin-bottom: 26px;
+  font-weight: 600;
+}
+
 .step {
   background: #fafafa;
-  border-radius: 16px;
+  border-radius: 18px;
+  padding: 18px 22px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.step strong {
+  font-weight: 600;
 }
 
 .num {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
   background: #000;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  }
+.final-cta {
+  margin-top: 36px;
+}
+
+.footer {
+  font-size: 12px;
+  color: #999;
+  margin-top: 44px;
+}
+
+#desktop-message {
+  display: none;
+  text-align: center;
+  padding: 80px 20px;
+  color: #000;
+}
 </style>
+
 </head>
 
 <body>
@@ -87,11 +175,10 @@ h1 {
 
       <div class="brand">Brandy Melville</div>
 
-      <div class="card-wrap">
+      
         <div class="card-mask">
           <img src="Brandy Melville-giftcard.png" alt="Brandy Melville Gift Card">
         </div>
-      </div>
 
       <h1>Get <span>$750 Brandy Melville Gift Card</span></h1>
       <p class="sub">
